@@ -1,3 +1,9 @@
+# Exit if fzf is not installed
+# ----------------------------
+if ! builtin type fzf >/dev/null 2>&1; then
+  return
+fi
+
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
